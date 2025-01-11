@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caser</title>
+    <link rel="stylesheet" href="./gears/main.css">
+</head>
+<body>
+
+<h1><a href="https://liledix4.github.io">liledix4</a> Caser</h1>
+<p><b>Disclaimer:</b> some features are disabled, since this project is still work-in-progress.</p>
+<p>
+    <textarea id="input-text" rows="5" placeholder="Enter text for which you want to change the case."></textarea>
+</p>
+<p>
+    <label>
+        <span>From</span>
+        <select id="from-case">
+            <option value="original" selected>• As it is written</option>
+            <option disabled>————————————</option>
+            <option disabled>BASIC:</option>
+            <option disabled value="title">• Title Case</option>
+            <option disabled value="start">• Start Case</option>
+            <option disabled value="allcaps">• ALL CAPS</option>
+            <option disabled value="lowercase">• lowercase</option>
+            <option disabled>————————————</option>
+            <option disabled>JOINED:</option>
+            <option disabled value="pascal">• PascalCase</option>
+            <option disabled value="camel">• camelCase</option>
+            <option disabled value="scream">• SCREAMINGCASE</option>
+            <option disabled value="flat">• flatcase</option>
+            <option disabled>————————————</option>
+            <option disabled>WITH DELIMITERS:</option>
+            <option disabled value="snake">• snake_case</option>
+            <option disabled value="titlesnake">• Title_Case (snake)</option>
+            <option disabled value="macro">• MACRO_CASE</option>
+            <option disabled value="kebab">• kebab-case</option>
+            <option disabled value="httpheader">• HTTP-Header-Case</option>
+            <option disabled value="train">• TRAIN-CASE</option>
+        </select>
+    </label>
+    <label>
+        <span>to</span>
+        <select id="to-case">
+            <option value="unchanged" selected>• (do not change)</option>
+            <option disabled>————————————</option>
+            <option disabled>BASIC:</option>
+            <option disabled value="title">• Title Case</option>
+            <option disabled value="start">• Start Case</option>
+            <option value="allcaps">• ALL CAPS</option>
+            <option value="lowercase">• lower case</option>
+            <option disabled>————————————</option>
+            <option disabled>JOINED:</option>
+            <option value="pascal">• PascalCase</option>
+            <option value="camel">• camelCase</option>
+            <option value="scream">• SCREAMINGCASE</option>
+            <option value="flat">• flatcase</option>
+            <option disabled>————————————</option>
+            <option disabled>WITH DELIMITERS:</option>
+            <option value="snake">• snake_case</option>
+            <option value="titlesnake">• Title_Case (snake)</option>
+            <option value="macro">• MACRO_CASE</option>
+            <option value="kebab">• kebab-case</option>
+            <option value="httpheader">• HTTP-Header-Case</option>
+            <option value="train">• TRAIN-CASE</option>
+        </select>
+    </label>
+</p>
+<p>
+    <label>
+        <input type="checkbox" id="strict" disabled>
+        <span>Strict processing</span>
+    </label>
+</p>
+<p>
+    <label>
+        <span>Allowed symbols (RegEx): ^[</span>
+        <input type="text" id="symbols" disabled>
+        <span>]*$ <i>(leave empty to use default pattern)</i></span>
+    </label>
+</p>
+<hr>
+<pre id="result"></pre>
+
+<script type="module" src="./gears/main.js"></script>
+</body>
+</html>
