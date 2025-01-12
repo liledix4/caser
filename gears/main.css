@@ -1,14 +1,17 @@
 * {
     box-sizing: border-box;
 }
-:root {
+:root:not(.minimal) {
     font-family: 'Exo 2', 'Segoe UI Variable Display', 'Segoe UI', BlinkMacSystemFont, system-ui, -apple-system, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
     color: white;
 }
-body {
+:root:not(.minimal) body {
     margin: 20px;
     background-color: #222222;
+}
+:root.minimal body {
+    margin: 0;
 }
 a {
     color: #009444;
@@ -54,6 +57,15 @@ hr {
     border: none;
     border-top: 2px solid #ffffff22;
 }
-code, pre {
+code, kbd, pre {
     font-family: 'JetBrains Mono', monospace;
+    margin: 0;
+}
+
+:root.minimal * {
+    font-family: revert;
+    font-size: unset;
+}
+:root.minimal :not(body, #result) {
+    display: none !important;
 }
