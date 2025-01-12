@@ -29,15 +29,6 @@ selectorStrictProcessing.addEventListener('change', doIt);
 
 
 if (queryStrings) {
-    if (
-        queryStrings.minimal !== undefined ||
-        queryStrings.min !== undefined
-    ) {
-        document.documentElement.classList.add('minimal');
-        document.querySelectorAll('body > :not(#result)').forEach(element => {
-            element.remove();
-        });
-    }
     if (queryStrings.text)
         selectorInputText.value = queryStrings.text;
     if (queryStrings.tocase)
@@ -54,4 +45,12 @@ if (queryStrings) {
         selectorStrictProcessing.checked = true;
     }
     doIt();
+
+    if (
+        queryStrings.minimal !== undefined ||
+        queryStrings.min !== undefined
+    ) {
+        document.documentElement.innerHTML = selectorResult.innerText;
+        document.documentElement.style.fontFamily = 'monospace';
+    }
 }
