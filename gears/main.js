@@ -37,5 +37,12 @@ if (queryStrings) {
         selectorFromCaseType.value = queryStrings.fromcase;
     if (queryStrings.allowed)
         selectorAllowedSymbols.value = queryStrings.allowed;
+    if (
+        queryStrings.strict !== undefined &&
+        queryStrings.strict !== false &&
+        queryStrings.strict !== 'no'
+    ) {
+        selectorStrictProcessing.checked = true;
+    }
     doIt();
 }

@@ -14,29 +14,32 @@ export function getQueryStrings() {
         const key = arr2[0];
         const value = arr2[1];
 
-        if (value.match(/^\d+$/))
-            object[key] = parseInt(value);
-        else if (value.match(/^[\d\.]+$/))
-            object[key] = parseFloat(value);
-        else switch (value) {
-            case 'true':
-                object[key] = true;
-                break;
-            case 'false':
-                object[key] = false;
-                break;
-            case 'null':
-                object[key] = null;
-                break;
-            case 'undefined':
-                object[key] = undefined;
-                break;
-            case 'NaN':
-                object[key] = NaN;
-                break;
-            default:
-                object[key] = value;
+        if (value) {
+            if (value.match(/^\d+$/))
+                object[key] = parseInt(value);
+            else if (value.match(/^[\d\.]+$/))
+                object[key] = parseFloat(value);
+            else switch (value) {
+                case 'true':
+                    object[key] = true;
+                    break;
+                case 'false':
+                    object[key] = false;
+                    break;
+                case 'null':
+                    object[key] = null;
+                    break;
+                case 'undefined':
+                    object[key] = undefined;
+                    break;
+                case 'NaN':
+                    object[key] = NaN;
+                    break;
+                default:
+                    object[key] = value;
+            }
         }
+        else object[key] = null;
     });
 
     return object;
