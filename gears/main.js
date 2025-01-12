@@ -50,7 +50,7 @@ if (queryStrings) {
         queryStrings.minimal !== undefined ||
         queryStrings.min !== undefined
     ) {
-        document.documentElement.innerHTML = selectorResult.innerText;
         document.documentElement.style.fontFamily = 'monospace';
+        document.documentElement.innerHTML = selectorResult.innerText;
     }
 }
