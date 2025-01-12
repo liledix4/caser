@@ -4,7 +4,7 @@ export let queryStrings = getQueryStrings();
 export function getQueryStrings() {
     let object = {};
 
-    const question = location.href.match(/(?<=\?).*$/);
+    const question = decodeURI(location.href).match(/(?<=\?).*$/);
     if (!question) return;
 
     const amp = question[0].split('&');

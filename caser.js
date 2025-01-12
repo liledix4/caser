@@ -1,13 +1,11 @@
 import { joinedCase } from "./js/joined-case.js";
 
 
-export function caser(text, toCaseType = 'unchanged', fromCaseType = 'original', allowedSymbols) {
-    console.log({
-        text: text,
-        toCaseType: toCaseType,
-        fromCaseType: fromCaseType,
-        allowedSymbols: allowedSymbols,
-    });
+export function caser(text, toCaseType = 'unchanged', fromCaseType = 'original', allowedSymbols, strictProcessing = false) {
+    // TODO fromCaseType
+    // TODO allowedSymbols
+    // TODO strictProcessing
+
     switch (toCaseType) {
         case 'unchanged':
             return text;
