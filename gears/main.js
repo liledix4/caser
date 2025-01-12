@@ -32,8 +32,12 @@ if (queryStrings) {
     if (
         queryStrings.minimal !== undefined ||
         queryStrings.min !== undefined
-    )
+    ) {
         document.documentElement.classList.add('minimal');
+        document.querySelectorAll('body > :not(#result)').forEach(element => {
+            element.remove();
+        });
+    }
     if (queryStrings.text)
         selectorInputText.value = queryStrings.text;
     if (queryStrings.tocase)
