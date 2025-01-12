@@ -59,7 +59,6 @@ code, kbd, pre {
     margin: 0;
 }
 #result {
-    max-width: 100%;
-    word-wrap: break-word;
+    white-space: pre-wrap;
     overflow-wrap: anywhere;
 }
